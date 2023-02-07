@@ -8,7 +8,7 @@
                 <div class="form-group">
                     <label>เจ้าของ</label>
                     <div class="input-group">
-                        <input placeholder="รหัสลูกค้า" type="text"
+                        <input readonly placeholder="รหัสลูกค้า" type="text"
                             class="form-control" name="customer.name"
                             [(ngModel)]="customer.name">
                         <a class="btn input-group-addon bg-blue"
@@ -21,19 +21,21 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="form-group">
                     <label for="">ชื่อสัตว์เลี้ยง</label>
-                    <input class="form-control" name="pet.name" [(ngModel)]="pet.name"/>
+                    <input class="form-control" name="pet.name"
+                        [(ngModel)]="pet.name"/>
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="form-group">
                     <label for="">หมายเหตุ</label>
-                    <input class="form-control" name="pet.remark" [(ngModel)]="pet.remark" />
+                    <input class="form-control" name="pet.remark"
+                        [(ngModel)]="pet.remark" />
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                 <div class="form-group text-center">
                     <a class="btn btn-success" (click)="save()">
-                        <i class="fa fa-check" aria-hidden="true"> บันทึก</i>
+                        <i class="fa fa-floppy-o" aria-hidden="true"> บันทึก</i>
                     </a>
                 </div>
             </div>
@@ -113,6 +115,3 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<script>
- document.getElementsByTagName("input").reset();
-</script>
